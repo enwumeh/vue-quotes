@@ -1,22 +1,33 @@
 <template>
 <div id="app">
   <main>
+    <div class="quotes-title"> Quotes App
+
+    </div>
     <div class="search-box">
-      <input type="text" class="search-bar"/>
+      <input type="text" class="search-bar" placeholder="Find a quote">
+      <button>Find!</button>
+    
       </div>
+      <div class="quotes-wrap">
+
+      </div>
+
+
   </main>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import quotes from './components/quotes.js'
 
 export default {
   name: 'App',
-  data: () => {
+  data () {
     return {
-      
+      quotesData: quotes
     }
+    
   }
 }
 </script>
