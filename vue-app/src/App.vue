@@ -1,17 +1,10 @@
 <template>
 <div id="app">
   <main>
-    <div class="quotes-title"> Quotes App
-
+    <div class="quotes-title"> Quotes Finder App
+     
     </div>
-    <div class="search-box">
-      <input type="text" class="search-bar" placeholder="Find a quote">
-      <button>Find!</button>
     
-      </div>
-      <div class="quotes-wrap">
-
-      </div>
 
 
   </main>
@@ -19,7 +12,7 @@
 </template>
 
 <script>
-import quotes from './components/quotes.js'
+import quotes from './quotes.js'
 
 export default {
   name: 'App',

@@ -1,4 +1,4 @@
-const quotez = [
+ [
   {
     source: "The Wolf",
     context: "Pulp Fiction",
