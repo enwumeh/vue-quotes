@@ -1,12 +1,11 @@
 <template>
   <div class="quotes">
     <div class="search-box">
-      <input type="text" id="user-input" class="search-bar" placeholder="Find a quote" />
-      <!-- <button>Find!{{ set }}</button> -->
+      <input type="text" id='user-input' class="search-bar" placeholder="Find a quote" />
+      <button class="search-button" v-on:click="filtered = searchResults(set)">Search</button>
     </div>
     <div class="quotes-main">
       <div class="data">
-        <!-- {{ set }} 'to the left' -->
         <ul class="list-quotes">
             
             <div class="filter">
@@ -52,8 +51,8 @@ showGames: (set) => {
   return set.filter((element) => element.theme == "games");
 },
 searchResults: (set) => {
-  const input = document.getElementById('user-input');
-  return set.filter((element) => element.quote.includes(input));
+  const input = document.getElementById('user-input').value.toLowerCase();
+  return set.filter((element) => element.quote.toLowerCase().includes(input));
 },
   }
 };
