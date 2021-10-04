@@ -25,9 +25,10 @@ export default {
 }
 
 .quotes-title {
-  font-size: 10vh;
+  font-family: Andale Mono, monospace;
+  font-size: 8vh;
   text-align: center;
-  color: red;
+  color: rgb(22, 21, 21);
 }
 #app {
   margin: 0;
