@@ -12,7 +12,7 @@
               <button class="movie filter-button" v-on:click="filtered = showMovies(set)">MOVIES</button>
                <button class="game filter-button" v-on:click="filtered = showGames(set)">GAMES</button>
             </div>
-          <li v-for="element in filtered" v-bind:key="element.quote">
+          <li v-for="element in filtered.slice(15*currentPage, 15*(currentPage + 1))" v-bind:key="element.quote">
             <div class="quote-section">
            <h1 class="quote-source"> {{ element.source }}</h1>
             <br>
@@ -40,7 +40,7 @@ export default {
     return {
       set: quoteList,
       filtered: quoteList,
-      currentPage: "CURRENT PAGE IS FINE"
+      currentPage: 0
     }
   }, 
   methods: {
