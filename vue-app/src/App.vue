@@ -25,6 +25,8 @@ export default {
 }
 
 .quotes-title {
+  font-size: 10vh;
+  text-align: center;
   color: red;
 }
 #app {
