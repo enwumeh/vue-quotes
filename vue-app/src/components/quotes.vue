@@ -12,17 +12,17 @@
               <button class="movie filter-button" v-on:click="filtered = showMovies(set)">MOVIES</button>
                <button class="game filter-button" v-on:click="filtered = showGames(set)">GAMES</button>
             </div>
-          <li v-for="element in filtered.slice(15*currentPage, 15*(currentPage + 1))" v-bind:key="element.quote">
+          <li v-bind:key="element.quote" v-for="element in filtered.slice(15*currentPage, 15*(currentPage + 1))">
             <div class="quote-section">
-           <h1 class="quote-source"> {{ element.source }}</h1>
+           <h1 class="quote-source">From: {{ element.source }}</h1>
             <br>
-           <div class="quote-text">{{ element.quote }}</div>
+           <div class="quote-text">Quote: <br>{{ element.quote }}</div>
             </div>
             <br>
             </li>
             <div class="navigation">
-              <button class="nav">← </button>
-               <button class="nav">→ </button>
+              <button class="nav" v-on:click="currentPage >= 0 ? currentPage-=1 : currentPage = currentPage + 0">← </button>
+               <button class="nav" v-on:click="currentPage >= 0 ? currentPage = currentPage + 1 : currentPage= currentPage + 0">→ </button>
             </div>
         </ul>
       </div>
