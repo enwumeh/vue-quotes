@@ -1,26 +1,18 @@
 <template>
-<div id="app">
-  <main>
-    <div class="quotes-title"> Quotes Finder App
-     
-    </div>
-    
-
-
-  </main>
+  <div id="app">
+    <main>
+      <div class="quotes-title">Quotes Finder App</div>
+      <Quotes/>
+    </main>
   </div>
 </template>
 
 <script>
-import quotes from './quotes.js'
-
+import Quotes from "./components/Quotes";
 export default {
-  name: 'App',
-  data () {
-    return {
-      quotesData: quotes
-    }
-    
+  name: "App",
+  components: {
+    Quotes
   }
 }
 </script>
@@ -32,7 +24,10 @@ export default {
   box-sizing: border-box;
 }
 
+.quotes-title {
+  color: red;
+}
 #app {
-    margin: 0;
+  margin: 0;
 }
 </style>
